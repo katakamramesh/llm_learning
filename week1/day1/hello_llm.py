@@ -15,16 +15,12 @@ model="openai/gpt-oss-120b"
 role="user"
 prompt="Do you know ramesh katakam"
 
-message_system={
-    "role":"system",
-    "content": "You are my loving wife"
-}
 message={
     "role" : role,
     "content" : prompt
 }
 
-messages=[message_system,message]
+messages=[message]
 # Temperature by default is 0 meaning safe. range is [0,2]
 response=client.chat.completions.create(model=model, messages=messages)
 # print(response)
