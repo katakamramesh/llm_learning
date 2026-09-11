@@ -7,25 +7,31 @@ load_dotenv()
 my_api_key=os.getenv("GROQ_API_KEY")
 
 if not my_api_key:
-    raise ValueError("API key kaha hai bhai")
+    raise ValueError("API key missed")
 
 client=Groq(api_key=my_api_key)
 
-model="llama-3.3-70b-versatile"
+model="openai/gpt-oss-120b"
 role="user"
-prompt="Do you know Padho with Pratyush"
-# message me role and content
+prompt="Do you know ramesh katakam"
+
+message_system={
+    "role":"system",
+    "content": "You are my loving wife"
+}
 message={
-    "role": role,
-    "content": prompt
+    "role" : role,
+    "content" : prompt
 }
 
-messages=[message]
-
+messages=[message_system,message]
+# Temperature by default is 0 meaning safe. range is [0,2]
 response=client.chat.completions.create(model=model, messages=messages)
-print(response)
+# print(response)
 
-print("#######################################")
+print("--------------------")
 
 answer=response.choices[0].message.content
 print(answer)
+
+print("--------------------")
