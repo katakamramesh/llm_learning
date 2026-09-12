@@ -46,7 +46,7 @@ messages_company=[system_company,user_company]
 # Temperature by default is 0 meaning safe. range is [0,2]
 response_wife=client.chat.completions.create(model=model, messages=messages_wife)
 response_manager=client.chat.completions.create(model=model, messages=messages_manager, temperature=1)
-response_company=client.chat.completions.create(model=model, messages=messages_company, temperature=2)
+response_company=client.chat.completions.create(model=model, messages=messages_company, temperature=0)
 
 # print(response)
 
@@ -57,3 +57,4 @@ print(response_manager.choices[0].message.content)
 print("--------------------")
 print(response_company.choices[0].message.content)
 print("--------------------")
+print(response_company.usage)
