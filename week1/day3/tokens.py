@@ -30,11 +30,12 @@ for prompt in prompts:
 
     response = client.chat.completions.create(
     model=model, 
-    messages=messages
+    messages=messages,
+    max_tokens=500
     )
 
     usage = response.usage
 
-    print(f"Prompt: {prompt} -->your tokens: {usage.prompt_tokens} completion_tokens: {usage.completion_tokens} total tokens: {usage.total_tokens}  Finish Reason: {response.choices[0].finish_reason}")
+    print(f"Prompt: {prompt} -->your tokens: {usage.prompt_tokens} completion_tokens: {usage.completion_tokens} total tokens: {usage.total_tokens}  Finish Reason: {response.choices[0].finish_reason}")# length means the max token size, stop means normal execution
     print("user tokens : " , usage.prompt_tokens)
     print(f"machine tokens : {usage.completion_tokens}") # modern formatting - f string
