@@ -20,9 +20,13 @@ def llm_answer(prompt):
     answer = response.choices[0].message.content
     return answer
 
-bad_prompts = """
+bad_prompt = """
 This is a user complaint:
 My laptop is not working classify this
 """
+bad_prompt1 = """
+This is a user complaint:
+My girlfirend has left me classify this
+"""
 
-print(llm_answer(bad_prompts))
+print(llm_answer(bad_prompt1))
