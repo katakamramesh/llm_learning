@@ -22,8 +22,7 @@ def llm_answer(prompt):
 
 bad_prompts = """
 This is a user complaint:
-My laptop is not working
-classify this
+My laptop is not working classify this
 """
 
 print(llm_answer(bad_prompts))
