@@ -43,7 +43,7 @@ good_prompt1 = """
 #Constraint: you have to classify the user complaint in one of the following categories: Hardware, Software, Network
 #Output: You answer should be in the one word and above mentioned constraints only
 #Example: one shot : for example, if the user complaint is "My laptop is not connecting to the internet", the output should be "Network"
-
+#Fallback: If the user complaint is not related to laptop, you should answer "Not related to laptop"
 
 This is a user complaint:
 My Laptop is not working classify this
