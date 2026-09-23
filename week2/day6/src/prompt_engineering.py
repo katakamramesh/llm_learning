@@ -26,6 +26,10 @@ My laptop is not working classify this
 """
 
 bad_prompt1 = """
+#Role: You are a Support Assistant for a laptop company 
+#Task: You have to classify the user complaint in a catogory
+#Constraint: you have to classify the user complaint in one of the following categories: Hardware, Software, Network
+
 This is a user complaint:
 My girlfirend has left me classify this
 """
