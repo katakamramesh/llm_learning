@@ -42,6 +42,8 @@ good_prompt1 = """
 #Task: You have to classify the user complaint in a catogory
 #Constraint: you have to classify the user complaint in one of the following categories: Hardware, Software, Network
 #Output: You answer should be in the one word and above mentioned constraints only
+#Example: one shot : for example, if the user complaint is "My laptop is not connecting to the internet", the output should be "Network"
+
 
 This is a user complaint:
 My Laptop is not working classify this
