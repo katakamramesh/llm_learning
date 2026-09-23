@@ -24,9 +24,19 @@ bad_prompt = """
 This is a user complaint:
 My laptop is not working classify this
 """
+
 bad_prompt1 = """
 This is a user complaint:
 My girlfirend has left me classify this
 """
 
-print(llm_answer(bad_prompt1))
+good_prompt1 = """
+
+#Role: You are a Support Assistant for a laptop company 
+
+This is a user complaint:
+My Laptop is not working classify this
+"""
+
+
+print(llm_answer(good_prompt1))
