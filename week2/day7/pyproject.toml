@@ -7,7 +7,10 @@ authors = [
     { name = "Ramesh Katakam", email = "katakamramesh52@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "groq>=1.7.0",
+    "python-dotenv>=1.2.3",
+]
 
 [project.scripts]
 day7 = "day7:main"
