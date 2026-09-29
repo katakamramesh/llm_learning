@@ -20,3 +20,5 @@ def ask_llm(system_prompt, user_prompt):
     messages=[sys_msg, user_msg]
     response = client.chat.completions.create(model=model, messages=messages)
     return response.choices[0].message.content
+
+def 
