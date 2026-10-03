@@ -18,5 +18,10 @@ messages={
 response = client.chat.completions.create(
     model=Model, messages=[messages]
 )
-print(response.choices[0].message.content)
+#print(response.choices[0].message.content)
 
+response1 = client.chat.completions.create(
+    model=Model, messages=[messages], stream=True
+)
+for chunk in response1:
+    print(chunk.choices[0].delta.content, end="", flush=True)
