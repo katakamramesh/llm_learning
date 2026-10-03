@@ -1,11 +1,11 @@
 import os
-load_dotenv()
 from pathlib import Path
 from time import sleep
 from xmlrpc import client
 from dotenv import load_dotenv
 from groq import Groq
-from time import sleep
+
+load_dotenv()
 
 model = os.getenv("MODEL")
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
