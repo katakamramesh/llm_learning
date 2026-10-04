@@ -15,9 +15,9 @@ messages={
             "role": "user",
             "content": user_message
         }
-response = client.chat.completions.create(
-    model=Model, messages=[messages]
-)
+# response = client.chat.completions.create(
+#     model=Model, messages=[messages]
+# )
 #print(response.choices[0].message.content)
 
 response1 = client.chat.completions.create(
