@@ -7,7 +7,9 @@ authors = [
     { name = "Ramesh Katakam", email = "katakamramesh52@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.143.0",
+]
 
 [project.scripts]
 day10 = "day10:main"
