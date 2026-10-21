@@ -52,6 +52,9 @@ class Resume(BaseModel):
 
 resume_schema = Resume.model_json_schema()
 
+class chatRequest(BaseModel):
+    question: str
+    
 def parse_resume(resume_text):
     system_prompt = f"""
     You are an expert resume parser.
